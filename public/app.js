@@ -48,7 +48,7 @@ submitBtn.addEventListener('click', (event) => {
 const sendMail = (mail) => {
     fetch("https://stormy-fortress-18043.herokuapp.com/send", {
         method: "POST",
-        body: mail,
+        body: mail
     }).then((response) => {
         return response.json();
     });
