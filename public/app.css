@@ -186,7 +186,7 @@ textarea {
   padding: 10px;
 }
 
-#submitBtn {
+#submit {
   background-color: white;
   color: #252a32;
   border: 1px solid #252a32;
@@ -196,7 +196,7 @@ textarea {
   margin-left: 10px;
 }
 
-#submitBtn:hover {
+#submit:hover {
   color: gray;
   border: 1px solid gray;
 }
