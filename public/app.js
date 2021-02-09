@@ -30,7 +30,7 @@ showNavInit(x) // Call listener function at run time
 x.addEventListener(showNavInit) // Attach listener function on state changes
 
 
-const formEvent = form.addEventListener('submit', (event) => {
+const formEvent = form.addEventListener('submitBtn', (event) => {
     event.preventDefault();
 
     let mail = new FormData(form);
