@@ -1,0 +1,617 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15rem;
+  color: #252a32;
+  margin: 0;
+  padding: 0;
+}
+
+/* Grid Area Names */
+
+.header {
+  grid-area: header;
+}
+
+.bio {
+  grid-area: bio;
+}
+
+.photo {
+  grid-area: photo;
+}
+
+.about {
+  grid-area: about;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+#portfolio {
+  grid-area: portfolio;
+}
+
+#contact {
+  grid-area: contact;
+}
+
+#navBarLarge {
+  grid-area: nav;
+}
+
+/* Wrapper */
+
+.wrapper {
+  text-align: center;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "bio"
+    "about"
+    "skills"
+    "portfolio"
+    "contact";
+}
+
+.header {
+  color: white;
+  z-index: 20;
+  height: 80px;
+  background-color: #252a32;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#name {
+  font-size: 1.5rem;
+}
+
+#middleName {
+  color: orange;
+}
+
+#navLinkContainer {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+#mobileNavLinkContainer {
+  gap: 1rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 2.25rem 0rem 2.25rem 0rem;
+}
+
+.bio,
+#contact,
+#portfolio {
+  padding-top: 100px;
+}
+
+#hamburgerBtn {
+  color: white;
+  position: fixed;
+  top: 15px;
+  right: 30px;
+  z-index: 10;
+  font-size: 2.5rem;
+}
+
+#hamburgerBtn:hover {
+  cursor: pointer;
+}
+
+#hamburgerBtn:active,
+#hamburgerBtn:visited {
+  text-decoration: none;
+}
+
+.photo {
+  display: none;
+}
+
+#navBar {
+  display: none;
+}
+
+#navBarLarge {
+  display: none;
+}
+
+.bio {
+  text-align: left;
+}
+
+.about {
+  background-color: rgb(252, 244, 244);
+}
+
+#contactFormContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem 1rem 0rem;
+  width: 100%;
+}
+
+#portfolioContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.formElement {
+  text-align: left;
+  padding: 1rem;
+}
+
+.formElement input,
+textarea {
+  width: 100%;
+}
+
+.formElement input,
+textarea {
+  border: none;
+  border-bottom: 1px solid #252a32;
+  padding: 10px;
+}
+
+#submitBtn {
+  background-color: white;
+  color: #252a32;
+  border: 1px solid #252a32;
+  border-radius: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#submitBtn:hover {
+  color: gray;
+}
+
+#navBar {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  z-index: 15;
+  position: fixed;
+  background-color: #252a32;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  top: 0;
+  left: 0;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+#navImg {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.fa-ul {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-inline-start: 0;
+  text-align: left;
+}
+
+.fa-ul li {
+  padding-bottom: 1rem;
+}
+
+.nav-items {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  padding-inline-start: 0;
+  text-align: left;
+}
+
+.nav-items i {
+  padding-right: 1rem;
+}
+
+.nav-items > li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.mobileLink {
+  display: block;
+}
+
+.welcome {
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+.socialIcons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.socialIcons i {
+  font-size: 2rem;
+  color: gray;
+}
+
+#github {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#linkedin {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.active {
+  color: gray;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: gray;
+}
+
+nav > li:hover {
+  cursor: pointer;
+}
+
+nav a:visited {
+  text-decoration: none;
+}
+
+#navBar.open {
+  display: grid;
+}
+
+#contact {
+  height: 90vh;
+  margin-bottom: 50px;
+}
+
+.bio {
+  padding-left: 2rem;
+}
+
+.bio li {
+  list-style-type: none;
+  padding: 0rem 0rem 1rem 0rem;
+}
+
+.bio i {
+  color: #252a32;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.about {
+  text-align: left;
+  padding: 2rem;
+}
+
+.skills i {
+  font-size: 2rem;
+}
+
+.skills h3 {
+  padding: 1rem;
+}
+
+#javascript {
+  color: rgb(236, 185, 15);
+}
+
+#react {
+  color: purple;
+  animation: spin 5s infinite;
+  animation-timing-function: linear;
+}
+
+#node {
+  color: green;
+}
+
+#html {
+  color: orange;
+}
+
+#css {
+  color: blue;
+}
+
+#wordpress {
+  color: rgb(42, 133, 163);
+}
+
+#db {
+  color: orange;
+}
+
+.businessCard {
+  display: none;
+}
+
+/* Spin animation for react icon */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* MEDIA QUERY 768 */
+
+@media only screen and (min-width: 768px) {
+  body {
+    margin-left: 250px;
+  }
+
+  .wrapper {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+      "bio bio bio bio"
+      "about about about about"
+      "skills skills skills skills"
+      "portfolio portfolio portfolio portfolio"
+      "contact contact contact contact";
+  }
+
+  #navBar.open {
+    display: none;
+  }
+
+  #hamburgerBtn {
+    display: none;
+  }
+
+  .header {
+    display: none;
+  }
+
+  #navBar {
+    display: none;
+  }
+
+  #navBarLarge {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    background-color: #252a32;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    color: white;
+  }
+
+  #portfolio {
+    padding-top: 1rem;
+  }
+
+  .skills {
+    display: grid;
+    padding: 2rem;
+    gap: 20px;
+  }
+
+  .jsDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .reactDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .nodeDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .htmlDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .wordpressDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .dbDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
+
+/* MEDIA QUERY 1200 */
+
+@media only screen and (min-width: 1200px) {
+  body {
+    margin-left: 300px;
+  }
+
+  #navBarLarge {
+    width: 300px;
+  }
+
+  .wrapper {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "bio bio bio photo photo photo"
+      "about about about about about about"
+      "skills skills skills skills skills skills"
+      "portfolio portfolio portfolio portfolio portfolio portfolio"
+      "contact contact contact contact contact contact";
+  }
+
+  #portfolioContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bio {
+    display: grid;
+    align-content: center;
+    padding: 2rem;
+    grid-template-columns: 3fr;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .photo {
+    display: block;
+    text-align: center;
+    grid-template-columns: 3fr;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    padding: 2rem;
+  }
+
+  .bioImage {
+    width: 350px;
+  }
+
+  .jsDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .reactDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .nodeDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+
+  .htmlDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .wordpressDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .dbDisplay {
+    grid-template-columns: 2fr;
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+}
+
+/* Media Query for screens under 400px wide */
+
+@media only screen and (max-width: 400px) {
+  #name {
+    font-size: 1.15rem;
+  }
+
+  #hamburgerBtn {
+    font-size: 2rem;
+  }
+}
+
+/* Media Query for screens under 300px wide */
+
+@media only screen and (max-width: 300px) {
+  #name {
+    font-size: 1rem;
+  }
+
+  #hamburgerBtn {
+    font-size: 1.5rem;
+  }
+}
+
+/* mobile device landscape display business card view */
+
+@media only screen and (max-height: 550px) {
+  body {
+    margin-left: 0;
+  }
+
+  #navBar {
+    display: none;
+  }
+
+  #navBarLarge {
+    display: none;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .wrapper {
+    display: none;
+  }
+
+  #mobileInstructions {
+    color: firebrick;
+  }
+
+  .businessCard {
+    padding: 1rem 2rem 1rem 2rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    color: #252a32;
+  }
+}
