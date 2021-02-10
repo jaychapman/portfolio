@@ -141,6 +141,8 @@ body {
 
 .about {
   background-color: rgb(252, 244, 244);
+  text-align: left;
+  padding: 2rem;
 }
 
 #contactFormContainer {
@@ -155,7 +157,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  align-items: center;
   padding: 1rem;
 }
 
@@ -275,6 +276,10 @@ textarea {
   color: gray;
 }
 
+.socialIcons i:hover {
+  color: white;
+}
+
 #github {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -311,7 +316,6 @@ nav a:visited {
 }
 
 #contact {
-  /* height: 90vh; */
   margin-bottom: 50px;
 }
 
@@ -330,17 +334,14 @@ nav a:visited {
   font-size: 1.5rem;
 }
 
-.about {
-  text-align: left;
-  padding: 2rem;
-}
-
 .skills i {
   font-size: 2rem;
 }
 
-.skills h3 {
-  padding: 1rem;
+.skills {
+  display: grid;
+  gap: 30px;
+  padding: 2rem;
 }
 
 #javascript {
@@ -440,6 +441,7 @@ nav a:visited {
   }
 
   #portfolioContainer img {
+    height: 400px;
     max-width: 400px;
     border: 1px solid #252a32;
   }
@@ -451,8 +453,9 @@ nav a:visited {
 
   .skills {
     display: grid;
-    padding: 2rem;
-    gap: 20px;
+    padding: 2rem 2rem 4rem 2rem;
+    gap: 30px;
+    text-align: left;
   }
 
   .jsDisplay {
@@ -588,6 +591,13 @@ nav a:visited {
   #hamburgerBtn {
     font-size: 2rem;
   }
+
+  #portfolioContainer img {
+    height: auto;
+    max-width: 300px;
+    /* max-width: 400px; */
+    border: 1px solid #252a32;
+  }
 }
 
 /* Media Query for screens under 300px wide */
@@ -598,6 +608,14 @@ nav a:visited {
 
   #hamburgerBtn {
     font-size: 1.5rem;
+  }
+
+  #portfolioContainer img {
+    height: auto;
+    max-width: 225px;
+    /* max-width: 400px; */
+    border: 1px solid #252a32;
+    overflow-x: scroll;
   }
 }
 
@@ -637,5 +655,9 @@ nav a:visited {
     width: 100vw;
     background-color: white;
     color: #252a32;
+  }
+
+  .busCardContainer {
+    height: 250px;
   }
 }
