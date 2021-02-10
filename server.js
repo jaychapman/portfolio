@@ -47,14 +47,17 @@ app.post("/send", (req, res) => {
             sender: data.formName,
             to: process.env.EMAIL,
             subject: 'Contact Form Submission',
-            text: `${data.companyName} \n${data.formPhone} \n${data.formEmail} \n${data.message}`,
+            text: `Name: ${data.formName}\nCompany Name: ${data.companyName} \nPhone: ${data.formPhone} \nEmail: ${data.formEmail} \nMessage: ${data.message}`,
         };
-        transporter.sendMail(mail, (err, data) => {
+        transporter.sendMail(mail, (err, res) => {
             if (err) {
+                console.log('error');
                 console.log(err);
-                res.status(500).send("something went wrong");
+                res.status(500).json("something went wrong");
             }else {
-                res.status(200).send("Email successfully sent to recipient");
+                console.log('success');
+                res.status(200).json("success");
+                transporter.close();
             }
         });
     });
@@ -65,6 +68,9 @@ app.route("/").get(function (req, res) {
     res.sendFile(process.cwd() + "/public/index.html");
 });
 
+app.route("/thankyou").get(function (req, res) {
+    res.sendFile(process.cwd() + "/public/thankyou.html");
+});
 
 
 app.listen(PORT, () => {
