@@ -50,7 +50,7 @@
             <!-- ABOUT ME SECTION -->
             <section class="about">               
                     <h3>About Me</h3>
-                    <p>My name is Jay and I love to build things on the web. I attended Branford Hall Career Institute for Computer Networking Management. This is where I was first introduced to web development. I learned HTML and CSS, just enough to build static websites, but I really enjoyed it. Building websites was a hobby of mine and I would build websites for my friends bands and businesses. Recently I decided to change careers and wanted to learn how to build modern and complex web applications professionally. I recently completed the Full Stack Web Development program offered through The University of Connecticut School of Engineering</p>         
+                    <p>My name is Jay and I love to build things on the web. In 2003 I attended Branford Hall Career Institute for Computer Networking Management. This is where I was first introduced to very basic web development. I learned HTML and CSS, just enough to build static websites, but I really enjoyed it. Building websites was a hobby of mine and I would build websites for my friends bands and businesses. Recently I decided to change careers and wanted to learn how to build modern and complex web applications professionally. I recently completed the Full Stack Web Development program offered through The University of Connecticut School of Engineering. I have listed some of the skills I have aquired below.</p>         
             </section>
 
 
@@ -90,7 +90,7 @@
                         <div><i id="wordpress" class="fab fa-wordpress"></i></div>
                         <div><h4>Wordpress</h4></div>
                         <div>
-                            <p>Wordpress is a great way to quickly build a CMS website that can easily be scaled up. I have experience creating wordpress sites and with my knowledge of web development I am able to customize themes to accommodate individual needs. I know a little php which is helpful for customizing sites.</p>
+                            <p>Wordpress is a great way to quickly build a CMS website that can easily be scaled up. I have experience creating wordpress sites and with my knowledge of web development I am able to customize themes to accommodate individual needs. I know some basic php which is helpful for customizing sites.</p>
                         </div>
                     </div>
                     <div class="dbDisplay">
@@ -112,14 +112,14 @@
                             <img src="/public/img/ageAtHome.jpg" alt="Age At Home Screenshot"> 
                             <br>
                             <a href="https://github.com/jaychapman/Project3" target="_blank">view github repository</a>
-                            <p>This is a MERN full stack website that I built from scratch. This website is built for a fictional company called Age Safe at Home. This fictional company's business is performing background checks on home health care companies.  I used a css boilerplate called skeleton css for the basic grid layout and all other styling was hand coded. The website also uses twilio autopilot for the chatbot. I utilzed the zip-codes api and vanilla javascript to determine a radius to match appropriate providers with customers.</p>
+                            <p>This is a MERN full stack website that I built from scratch. This website is built for a fictional company called Age Safe at Home. This site matches user input with data stored in a mongoDB database. I used a css boilerplate called skeleton css for the basic grid layout and all other styling was hand coded. The website also uses twilio autopilot for the chatbot. I utilzed the zip-codes api and vanilla javascript to determine a radius to match appropriate providers with customers.</p>
                          </div>
                         <div>
                             <h4>Weather Dashboard</h4>
                            <img src="/public/img/weatherDashboard.jpg" alt="Weather Dashboard Screenshot"> 
                            <br>
                            <a href="https://github.com/jaychapman/weatherDashboard" target="_blank">view github repository</a>
-                           <p>This project is a weather dashboard that uses the openweathermap API openweathermap API. You can enter any city name and it will return today's weather plus the 5 day forecast. Local storage is used to store previous search results and when the page is refreshed or re-opened, it will display the weather and 5 day forecast for based on your last search. All of the functionality is thanks to JavaScript. I used the openweather API to retrieve 5 day weather information and wrote the code to pull out the information I wanted and plug it in to the html file as necessary. In this project I created a very basic html file and then used JavaScript to dynamically create the content.</p>
+                           <p>This project is a weather dashboard that uses the openweathermap API. You can enter any city name and it will return today's weather plus the 5 day forecast. Local storage is used to store previous search results and when the page is refreshed or re-opened, it will display the weather and 5 day forecast for based on your last search. All of the functionality is thanks to JavaScript. I used the openweather API to retrieve 5 day weather information and wrote the code to pull out the information I wanted and plug it in to the html file as necessary. In this project I created a very basic html file and then used JavaScript to dynamically create the content.</p>
                         </div>
                         <div>
                             <h4>Budget Tracker</h4>
@@ -148,19 +148,19 @@
                         <!-- FORM -->
                         <form method="POST" action="/send" id="contactForm" enctype="multipart/form-data">
                             <div class="formElement">
-                                <input type="text" name="formName" id="formName" placeholder="Name">
+                                <input type="text" name="formName" id="formName" placeholder="Name" required>
                             </div>
                             <div class="formElement">
                                 <input type="text" name="companyName" id="companyName" placeholder="Company">
                             </div>
                             <div class="formElement">
-                                <input type="phone" name="formPhone" id="formPhone" placeholder="Phone">
+                                <input type="tel" name="formPhone" id="formPhone" placeholder="Phone">
                             </div>
                             <div class="formElement">
-                                <input type="email" name="formEmail" id="formEmail" placeholder="Email">
+                                <input type="email" name="formEmail" id="formEmail" placeholder="Email" required>
                             </div>
                             <div class="formElement">
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                             </div>
                             <div class="formElement">
                             <input id="submit" type="submit" value="submit">    
@@ -190,7 +190,11 @@
             <div class="socialIcons">
                 <div id="github"><a href="https://github.com/jaychapman" target="_blank"><i class="fab fa-github"></i></a></div>
                 <div id="linkedin"><a href="https://www.linkedin.com/in/jay-chapman-074404205/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
-            </div>   
+            </div>  
+            <div class="navContact">
+                <div><p><span><i class="far fa-paper-plane"></i></span><a href="mailto:jaychapmanwebdev@gmail.com?subject=Email from Portfolio Site">Send Email</a></p></div>
+                <div><p>Phone: (860) 874-7943</p></div>
+            </div> 
         </nav>
 
         <!-- LARGE SCREEN NAVIGATION -->
@@ -220,6 +224,10 @@
                 <div id="github"><a href="https://github.com/jaychapman" target="_blank"><i class="fab fa-github"></i></a></div>
                 <div id="linkedin"><a href="https://www.linkedin.com/in/jay-chapman-074404205/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
             </div>          
+            <div class="navContact">
+                <div><p><span><i class="far fa-paper-plane"></i></span><a href="mailto:jaychapmanwebdev@gmail.com?subject=Email from Portfolio Site">Send Email</a></p></div>
+                <div><p>Phone: (860) 874-7943</p></div>
+            </div> 
          </nav>
         
     </div><!-- end wrapper -->
@@ -233,7 +241,7 @@
                         <h3>Full Stack Web Developer</h3>
                         <br>
                         <p>Phone: (860) 874-7943</p> 
-                        <p>email: <a href="mailto:jaychapman1110@gmail.com?subject=Email from Portfolio Site"> jchapmanwebdev@gmail.com</a></p>
+                        <p>email: <a href="mailto:jaychapmanwebdev@gmail.com?subject=Email from Portfolio Site"> jchapmanwebdev@gmail.com</a></p>
                     </div>
                     <p id="mobileInstructions">* Rotate mobile device or increase browser height to view this website</p>
                 </div>

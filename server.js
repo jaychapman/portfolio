@@ -57,7 +57,6 @@ app.post("/send", (req, res) => {
             }else {
                 console.log('success');
                 res.status(200).json("success");
-                transporter.close();
             }
         });
     });

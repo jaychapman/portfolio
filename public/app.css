@@ -135,6 +135,10 @@ body {
   display: none;
 }
 
+.navContact i {
+  padding-right: 5px;
+}
+
 .bio {
   text-align: left;
 }
@@ -194,7 +198,6 @@ textarea {
   border-radius: 5px;
   padding: 0.5rem;
   cursor: pointer;
-  margin-left: 10px;
 }
 
 #submit:hover {
@@ -268,7 +271,6 @@ textarea {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;
   align-items: center;
-  padding-bottom: 100px;
 }
 
 .socialIcons i {
@@ -342,6 +344,10 @@ nav a:visited {
   display: grid;
   gap: 30px;
   padding: 2rem;
+}
+
+.skills p {
+  text-align: left;
 }
 
 #javascript {
@@ -595,7 +601,16 @@ nav a:visited {
   #portfolioContainer img {
     height: auto;
     max-width: 300px;
-    /* max-width: 400px; */
+    border: 1px solid #252a32;
+  }
+}
+
+/* Media Query for screens under 350px wide */
+@media only screen and (max-width: 350px) {
+  #portfolioContainer img {
+    height: auto;
+    max-width: 275px;
+
     border: 1px solid #252a32;
   }
 }
