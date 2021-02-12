@@ -102,7 +102,7 @@ body {
 .bio,
 #contact,
 #portfolio {
-  padding-top: 100px;
+  padding-top: 90px;
 }
 
 #hamburgerBtn {
@@ -187,8 +187,30 @@ textarea {
 .formElement input,
 textarea {
   border: none;
-  border-bottom: 1px solid #252a32;
+  border-bottom: 1px solid gray;
   padding: 10px;
+}
+
+.formContact {
+  background-color: rgb(252, 244, 244);
+  padding: 1rem 0rem 2rem 0rem;
+}
+
+.formContact a {
+  color: #252a32;
+  text-decoration: none;
+}
+
+.formContact a:hover {
+  color: gray;
+}
+
+.formContact i {
+  padding-right: 5px;
+}
+
+.smallHeading {
+  font-style: italic;
 }
 
 #submit {
@@ -317,10 +339,6 @@ nav a:visited {
   display: grid;
 }
 
-#contact {
-  margin-bottom: 50px;
-}
-
 .bio {
   padding-left: 2rem;
 }
@@ -423,6 +441,14 @@ nav a:visited {
 
   .header {
     display: none;
+  }
+
+  .formContact {
+    display: none;
+  }
+
+  #contact {
+    margin-bottom: 100px;
   }
 
   #navBar {
