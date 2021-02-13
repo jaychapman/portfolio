@@ -47,7 +47,7 @@ app.post("/send", (req, res) => {
             sender: data.formName,
             to: process.env.EMAIL,
             subject: 'Contact Form Submission',
-            text: `Name: ${data.formName} \nPhone: ${data.formPhone} \nEmail: ${data.formEmail} \nMessage: ${data.message}`,
+            text: `Name: ${data.formName} \nEmail: ${data.formEmail} \nMessage: ${data.message}`,
         };
         transporter.sendMail(mail, (err, res) => {
             if (err) {
