@@ -5,6 +5,8 @@ const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submit');
 
 
+
+
 hamburderBtn.addEventListener('click', () => {
     console.log('button clicked');
     navBar.classList.toggle('open');
@@ -29,15 +31,30 @@ x.addEventListener(showNavInit, showNavInit) // Attach listener function on stat
 
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
+
+    const nameReq = form.formName.value;
+    const emailReq = form.formEmail.value;
+    const messReq = form.message.value;
+
+    console.log(form.formName.value);
+    console.log(form.formEmail.value);
+    console.log(form.message.value);
+
     let mail = new FormData(form);
-    sendMail(mail);
+        sendMail(mail);
 
-    function success() {
-        setTimeout(function(){window.location.href='/thankyou';}, 500);
-      }
-      success();
+    if(nameReq ==='' || emailReq==='' || messReq === '') {
+        alert('All fields are required');
+        showNavInit();
+        window.location.reload('/#contact');
+    }else {
+
+        function success() {
+            setTimeout(function(){window.location.href='/thankyou';}, 500);
+          }
+          success();
+    }
 })
-
 
 const sendMail = (mail) => {
     fetch("/send", {
