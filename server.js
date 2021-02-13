@@ -56,6 +56,7 @@ app.post("/send", (req, res) => {
                 res.status(500).json("something went wrong");
             }else {
                 console.log('success');
+                transporter.close();
                 res.status(200).json("success");
             }
         });
@@ -66,6 +67,7 @@ app.post("/send", (req, res) => {
 app.route("/").get(function (req, res) {
     res.sendFile(process.cwd() + "/public/index.html");
 });
+
 
 app.route("/thankyou").get(function (req, res) {
     res.sendFile(process.cwd() + "/public/thankyou.html");

@@ -187,7 +187,8 @@ textarea {
 .formElement input,
 textarea {
   border: none;
-  border-bottom: 1px solid gray;
+  border-radius: 0px;
+  border-bottom: 1px solid rgb(207, 206, 206);
   padding: 10px;
 }
 
@@ -449,6 +450,7 @@ nav a:visited {
 
   #contact {
     margin-bottom: 100px;
+    margin-top: 100px;
   }
 
   #navBar {

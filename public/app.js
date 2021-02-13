@@ -31,10 +31,10 @@ submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
     let mail = new FormData(form);
     sendMail(mail);
-    function success() {
-        window.location.href="/thankyou";
-      }
 
+    function success() {
+        setTimeout(function(){window.location.href='/thankyou';}, 500);
+      }
       success();
 })
 
@@ -45,6 +45,7 @@ const sendMail = (mail) => {
         body: mail
     }).then((response) => response.json());
 };
+
 
 
 
