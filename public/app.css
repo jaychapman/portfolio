@@ -149,6 +149,23 @@ body {
   padding: 2rem;
 }
 
+.readMore,
+.readLess {
+  cursor: pointer;
+}
+
+.longText {
+  display: none;
+}
+
+.readMore {
+  display: block;
+}
+
+.readLess {
+  display: none;
+}
+
 #contactFormContainer {
   display: grid;
   justify-content: center;
@@ -483,6 +500,14 @@ nav a:visited {
   #portfolioContainer p {
     padding: 0rem 2rem 2rem 2rem;
     text-align: left;
+  }
+
+  .readMore {
+    display: none;
+  }
+
+  .longText {
+    display: block;
   }
 
   .skills {
