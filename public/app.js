@@ -62,7 +62,6 @@ submitBtn.addEventListener('click', (event) => {
     console.log(form.message.value);
 
     let mail = new FormData(form);
-        //sendMail(mail);
 
     if(nameReq ==='' || emailReq==='' || messReq === '') {
         alert('All fields are required');
@@ -84,12 +83,6 @@ submitBtn.addEventListener('click', (event) => {
     }
 })
 
-// const sendMail = (mail) => {
-//     fetch("/send", {
-//         method: "POST",
-//         body: mail
-//     }).then((response) => response.json());
-// };
 
 
 
